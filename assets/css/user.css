@@ -1,0 +1,103 @@
+.user_card{
+    height: 270px;
+    width:  240px;
+    border: 1px solid #EAEAEA;
+    margin-bottom: 35px;
+    font-family: var( --regular_font_family );
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.user_card .user_header{
+    height: 80px;
+    border-bottom: 1px solid #EAEAEA;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    padding: 15px;
+}
+.user_card .user_header:after{
+    content: '';
+    border: 19px solid transparent;
+    border-right: 19px solid #E8CA33;
+    border-top: 19px solid #FFB86C;
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.user_card .user_header .status{
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    flex: 2;
+    overflow: hidden;
+    position: relative;
+}
+.user_card .user_header .status .name{
+    font-size: 16px;
+    color: #040404;
+    font-weight: bold;
+}
+.user_card .user_header .status .position{
+    font-size: 16px;
+    color: #949494;
+}
+.user_card .user_header .status:after {
+    content: " ";
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background-image: linear-gradient(to right, rgba(255,255,255,0), white);
+}
+.user_card .user_header .avatar{
+    flex: 1;
+    border-radius: 50%;
+}
+.user_card .user_header img{
+    max-width: 52px;
+    height: 52px;
+}
+.user_card .description{
+    padding: 10px 22px;
+    height: 150px;
+    font-size: 14px;
+    color: #949494;
+    line-height: 19px;
+    position: relative;
+    overflow: hidden;
+}
+.user_card .description:after {
+    content: " ";
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 50%;
+    left: 0;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0), white);
+}
+.user_card .description_user .name_project{
+    display: block;
+    line-height: 22px;
+    font-weight: bold;
+    color: #272121;
+    font-size: 18px;
+}
+.user_card .user_bottom{
+    border-top: 1px solid #EAEAEA;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+.user_card .user_bottom svg{
+    max-width: 16px;
+    max-height: 16px;
+    fill: #b0b0b0;
+}

@@ -1,0 +1,194 @@
+/*
+Theme Name: BackOffice
+Theme URI:
+Author: Faunus Dev
+Author URI: https://faunusaff.com/
+Description: BackOffice theme for WordPress
+Version: 0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: blog, rtl-language-support, translation-ready
+Text Domain: theme
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+@import 'components/nice_fields/nice_fields.css';
+@import 'assets/css/buttons.css';
+@import 'assets/css/icons.css';
+@import 'assets/css/table.css';
+@import 'assets/css/notify.css';
+@import 'assets/css/modals.css';
+@import 'assets/css/overlay.css';
+@import 'assets/css/left_panel.css';
+@import 'assets/css/auth.css';
+@import "assets/css/user_block.css";
+@import "assets/css/menu.css";
+@import 'assets/css/user.css';
+
+div, span {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: block;
+    height: 100%;
+    background-color: var( --main_background );
+    font-family: var( --regular_font_family );
+    font-size: 16px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.click_able {
+    cursor: pointer;
+}
+
+.site {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main_area {
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.site .site_content {
+    max-width: 840px;
+    margin: 0 auto;
+    padding: 32px;
+}
+
+.site_footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.page_title {
+    font-size: 24px;
+    font-family: var( --regular_font_family );
+    color: var( --accent_font_color );
+    margin: 0 0 16px 0;
+}
+
+.breadcrumbs_container {
+    margin-bottom: 8px;
+}
+
+.breadcrumbs_container .kama_breadcrumbs {
+    display: inline-flex;
+}
+
+.breadcrumbs_container a {
+    color: var( --regular_font_color );
+}
+
+.breadcrumbs_container a:hover {
+    color: var( --accent_hover_font_color );
+}
+
+.services_content {
+    width: 100%;
+}
+
+.loader {
+    position: relative;
+    border: 3px solid transparent;
+    border-top-color: var( --accent_border_color );
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity var( --regular_transition );
+}
+
+.loader.go {
+    opacity: 1;
+    animation: spin 1s linear infinite;
+}
+
+.loader:before {
+    content: ' ';
+    border: 3px solid transparent;
+    border-top-color: var( --accent_hover_border_color );
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    border-radius: 50%;
+    transition: opacity var( --regular_transition );
+    opacity: 0;
+}
+
+.loader.go:before {
+    animation: spin 2s linear infinite;
+    opacity: 1;
+}
+
+.loader:after {
+    content: ' ';
+    border: 3px solid transparent;
+    border-top-color: var( --divider_color );
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity var( --regular_transition );
+}
+
+.loader.go:after {
+    animation: spin 3s linear infinite;
+    opacity: 1;
+}
+
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px,1px,1px,1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal!important;
+}
+
+@keyframes spin {
+    0%   {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.disabled {
+    cursor: not-allowed;
+}
+
+* {
+    box-sizing: border-box;
+}

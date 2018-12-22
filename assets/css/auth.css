@@ -1,0 +1,102 @@
+/** Tabs and Forms **/
+
+.left_panel .auth {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.left_panel .forms {
+    position: relative;
+}
+
+.left_panel .tabs {
+    display: flex;
+    font-family: var( --regular_font_family );
+}
+
+.left_panel .tab {
+    display: flex;
+    height: 50px;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    transition: var( --regular_transition );
+    cursor: pointer;
+    border-right: 1px solid var( --divider_color );
+}
+
+.left_panel .tab:last-of-type {
+    border-right: none;
+}
+
+.left_panel .tab.current {
+
+}
+
+.left_panel .tab .title {
+    font-size: 18px;
+    padding: 0 8px;
+    color: var( --regular_font_color );
+    transition: var( --regular_transition );
+}
+
+.left_panel .tabs .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left_panel .tabs svg {
+    fill: var( --unactive_icon_color );
+    width: 24px;
+    height: 24px;
+    transition: var( --regular_transition );
+}
+
+/** On Hover **/
+
+.left_panel .tab:hover .title {
+    opacity: var( --opacity_blured );
+    color: var( --accent_hover_font_color );
+}
+
+.left_panel .tab:hover svg {
+    fill: var( --accent_hover_icon_color );
+    opacity: var( --opacity_blured );
+}
+
+/** Current **/
+
+.left_panel .tab.current .title {
+    color: var( --accent_font_color );
+    opacity: 1;
+}
+
+.left_panel .tab.current svg {
+    fill: var( --accent_icon_color );
+    opacity: 1;
+}
+
+.left_panel .auth .form {
+    display: none;
+    padding: 24px 0;
+}
+
+.left_panel .auth .form.current {
+    display: block;
+}
+
+.left_panel .form .form_footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/** Collapsed **/
+
+.left_panel.collapsed .auth {
+    display: none;
+}

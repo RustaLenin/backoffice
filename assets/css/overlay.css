@@ -1,0 +1,72 @@
+.overlay {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba( 0, 0, 0, 0.80);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+    z-index: 12;
+}
+
+.overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.overlay .close_overlay {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.overlay .close_overlay:hover svg {
+    fill: var( --bad_button );
+}
+
+.overlay .message {
+    color: var(--font_reverce_accent_color );
+    max-width: 85%;
+    padding: 16px;
+}
+
+.overlay .message.info {
+    border: 1px solid var( --info );
+}
+
+.overlay .message.success {
+    border: 1px solid var( --success );
+}
+
+.overlay .message.warning {
+    border: 1px solid var( --warning );
+}
+
+.overlay .message.error {
+    border: 1px solid var( --error );
+}
+
+.overlay .message .header {
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.overlay .message .header .nice_svg {
+    margin-right: 8px;
+}
+
+.overlay .message svg {
+    fill: #fff;
+    opacity: 1;
+}
+
+.overlay .message .title {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}

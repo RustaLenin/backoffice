@@ -1,0 +1,124 @@
+.user_block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid var( --divider_color );
+    padding: 16px;
+    height: 400px;
+    min-height: 400px;
+}
+
+.user_block .avatar_container {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.user_block .title {
+    font-size: 21px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var( --regular_font_color );
+}
+
+.user_block .sub_title {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: var( --sub_font_color );
+}
+
+.user_block .button.logout {
+    margin-bottom: 16px;
+    border: 1px solid var( --accent_second_button_color );
+    border-radius: 4px;
+    padding: 8px 24px;
+    color: var( --accent_second_button_color );
+    font-size: 16px;
+    background-color: var( --content_background );
+    transition: var( --regular_transition );
+}
+
+.user_block .button.logout svg {
+    fill: var( --accent_second_button_color );
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    transition: var( --regular_transition );
+}
+
+.user_block .button.logout:hover {
+    color: var( --font_reverce_accent_color );
+    background-color: var( --second_accent_background );
+}
+
+.user_block .button.logout:hover svg {
+    fill: var( --icon_reverce_accent_color );
+}
+
+.user_block .button.profile {
+    border: 1px solid var( --accent_button_color );
+    border-radius: 4px;
+    padding: 8px 24px;
+    color: var( --accent_button_color );
+    font-size: 16px;
+    transition: var( --regular_transition );
+}
+
+.user_block .button.profile svg {
+    fill: var( --accent_button_color );
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    transition: var( --regular_transition );
+}
+
+.user_block .button.profile:hover {
+    color: var( --font_reverce_accent_color );
+    background-color: var( --accent_background );
+}
+
+.user_block .button.profile:hover svg {
+    fill: var( --icon_reverce_accent_color );
+}
+
+/** Collapsed **/
+
+.left_panel.collapsed .user_block {
+    height: 200px;
+    min-height: 200px;
+}
+
+.left_panel.collapsed .user_block .button.logout .text {
+    display: none;
+}
+
+.left_panel.collapsed .user_block .button.logout svg,
+.left_panel.collapsed .user_block .button.profile svg {
+    margin-right: 0;
+}
+
+.left_panel.collapsed .user_block .button.profile .text {
+    display: none;
+}
+
+.left_panel.collapsed .user_block .title {
+    display: none;
+}
+
+.left_panel.collapsed .user_block .sub_title {
+    display: none;
+}
+
+.left_panel.collapsed .user_block .avatar_container {
+    width: 60px;
+    height: 60px;
+}
+
+/*@media screen and (max-width: 400px) {*/
+    /*.user_block {*/
+        /*display: none;*/
+    /*}*/
+/*}*/

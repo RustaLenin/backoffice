@@ -1,0 +1,159 @@
+/** Regular **/
+
+.table_container {
+
+}
+
+.nice_table {
+    font-family: var( --regular_font_family );
+    margin: 0 auto;
+    border-collapse: collapse;
+    color: var( --regular_font_color );
+}
+
+.nice_table.w100 {
+    width: 100%;
+}
+
+.nice_table a {
+    color: var( --regular_font_color );
+}
+
+.nice_table a:hover {
+    color: var( --accent_hover_font_color );
+}
+
+.nice_table .row {
+    border-bottom: 1px solid var( --divider_color );
+}
+
+.nice_table .row:last-of-type {
+    border-bottom: none;
+}
+
+.nice_table .cell {
+    min-width: 60px;
+}
+
+.nice_table .head {
+
+}
+
+.nice_table .head .row {
+
+}
+
+.nice_table .head .row .cell {
+
+}
+
+.nice_table .head .row.accent {
+    border-bottom: none;
+}
+
+.nice_table .head .row.accent .cell {
+    background-color: var( --accent_background );
+    color: var( --font_reverce_accent_color );
+    font-size: 16px;
+}
+
+.nice_table .head .row.accent .cell {
+    padding: 16px 8px !important;
+}
+
+.nice_table .head .row.settings {
+    border-bottom: none;
+}
+
+.nice_table .head .row.settings td {
+    padding: 6px 0;
+}
+
+.nice_table .head .table_settings {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nice_table .head .table_settings .nice_svg {
+    margin-right: 16px;
+}
+
+.nice_table .head .table_settings .nice_svg:last-of-type {
+    margin-right: 4px;
+}
+
+.nice_table .body {
+
+}
+
+.nice_table .body .row {
+
+}
+
+.nice_table .body .row .cell {
+
+}
+
+/** Modifications **/
+
+.nice_table.center tr td  {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.nice_table.density_low .cell {
+    padding: 4px 8px;
+}
+
+.nice_table.density_medium .cell {
+    padding: 8px 8px;
+}
+
+.nice_table.density_high .cell {
+    padding: 16px 12px;
+}
+
+.nice_table.zebra .body .row:nth-of-type(2n) {
+    background-color: var( --sub_bacground );
+}
+
+.nice_table.sticky {
+    overflow: scroll;
+}
+
+.nice_table.sticky .head .row .cell{
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+.nice_table.sticky .PinTableHeader svg,
+.nice_table.zebra .ToggleTableZebra svg,
+.nice_table.density_high .SetHighDensity svg,
+.nice_table.density_medium .SetMediumDensity svg,
+.nice_table.density_low .SetLowDensity svg,
+.nice_table.center .ToggleAlignCenter svg {
+    fill: var( --accent_icon_color );
+}
+
+.nice_table.sticky .PinTableHeader:hover svg,
+.nice_table.zebra .ToggleTableZebra:hover svg,
+.nice_table.density_high .SetHighDensity:hover svg,
+.nice_table.density_medium .SetMediumDensity:hover svg,
+.nice_table.density_low .SetLowDensity:hover svg,
+.nice_table.center .ToggleAlignCenter:hover svg {
+    fill: var( --accent_hover_icon_color );
+}
+
+/** Special **/
+
+.nice_table .cell_icon {
+    max-width: 32px;
+    max-height: 32px;
+}
+
+.nice_table .trash:hover svg {
+    fill: var( --bad_button );
+}

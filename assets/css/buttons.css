@@ -1,0 +1,28 @@
+.submit_button {
+    font-family: var( --regular_font_family );
+    background-color: var( --accent_second_button_color );
+    color: var( --font_reverce_accent_color );
+    font-size: 18px;
+    padding: 12px 24px;
+    border-radius: 6px;
+    opacity: var( --opacity_notfocus);
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.submit_button.w100 {
+    width: 100%;
+    text-align: center;
+}
+
+.submit_button.unactive {
+    background-color: var( --sub_bacground );
+}
+
+.submit_button:hover {
+    opacity: 1;
+}
+
+.submit_button.disabled {
+    background-color: var( --disabled_button_color );
+}

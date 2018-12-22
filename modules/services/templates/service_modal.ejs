@@ -1,0 +1,55 @@
+<div class="modal Modal">
+
+    <div class="header">
+        <span class="title">
+            <% if ( command === 'add') {%>New Service<% }
+            else if ( command=== 'update' ) {%>Update Service<% } %>
+        </span>
+
+        <div class="control">
+            <span class="nice_svg small CollapseModal click_able"><svg><use href="#minus"></use></svg></span>
+            <span class="nice_svg small CloseModal close_button click_able"><svg><use href="#close"></use></svg></span>
+        </div>
+
+    </div>
+
+    <div class="body">
+
+        <% jQuery.each( models['services'], function ( field, args ) {
+
+            if ( args['in_form'] ) {
+
+                let A = Object.assign( {}, args );
+
+                if ( command === 'update' ) {
+                    if ( data[field] ) {
+                        A['value'] = data[field];
+                    }
+                }
+
+                if ( typeof A['class'] === 'undefined' ) { A['class'] = 'ModalField'; }
+                else { A['class'] = args['class'] + ' ModalField'; }
+
+                if ( typeof A['field_class'] === 'undefined' ) { A['field_class'] = 'ModalInput' }
+                else { A['field_class'] = args['field_class'] + ' ModalInput'; }
+
+            %>
+                <%- NiceField( A ); %>
+            <% }
+        }); %>
+
+    </div>
+
+    <div class="footer">
+
+        <div class="submit_button disabled
+            <% if ( command === 'add') {%>SubmitAddService<% }
+            else if ( command === 'update' ) {%>SubmitUpdateService<% } %>"
+            <% if ( command === 'update' ) {%> data-id="<%- data['ID'] %>"<% } %>
+        >
+            <% if ( command === 'add') {%>Add Service<% } else if ( command === 'update' ) {%>Update Service<% } %>
+        </div>
+
+    </div>
+
+</div>
