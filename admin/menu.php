@@ -22,39 +22,11 @@ class THEME_ADMIN_MENU {
         );
 
         foreach ( $suffixes as $suffix ) {
-
-        	if ( class_exists( 'ITFF_INSERT' ) ) {
-
-        		/** SVG Sprite **/
-		        add_action( 'admin_head-' . $suffix, array( 'ITFF_INSERT', 'sprite') ); // SVG Sprite
-
-		        /** Modals **/
-		        add_action( 'admin_head-' . $suffix, array( 'ITFF_INSERT', 'modal_area') );
-		        add_action( 'admin_print_footer_scripts-' . $suffix, array( 'ITFF_INSERT', 'modal_templates') );
-
-		        /** Common framework css & js **/
-		        add_action( 'admin_print_footer_scripts-' . $suffix, array( 'ITFF_INSERT', 'styles') );
-		        add_action( 'admin_print_footer_scripts-' . $suffix, array( 'ITFF_INSERT', 'scripts') );
-
-		        /** Color Picker Area **/
-		        add_action( 'admin_print_footer_scripts-' . $suffix, array( 'ITFF_INSERT', 'color_picker_area') );
-	        }
-
-	        if ( class_exists( 'ITFF_NOTIFICATION' ) ) {
-
-		        /** Notifications **/
-		        add_action( 'admin_print_footer_scripts-' . $suffix, array( 'ITFF_NOTIFICATION', 'area') );
-		        add_action( 'admin_print_footer_scripts-' . $suffix, array( 'ITFF_NOTIFICATION', 'js') );
-		        add_action( 'admin_print_footer_scripts-' . $suffix, array( 'ITFF_NOTIFICATION', 'css') );
-		        add_action( 'admin_print_footer_scripts-' . $suffix, array( 'ITFF_NOTIFICATION', 'templates') );
-
-	        }
-
+            add_action( 'admin_enqueue_scripts-' . $suffix, array( 'NICE_FIELD', 'wp_enqueue') );
         }
 
         /** Settings page **/
         add_action( 'admin_print_footer_scripts-' . $settings_suffix, array( 'THEME_SETTINGS_PAGE', 'js') );
-	    /** Settings page **/
 	    add_action( 'admin_print_footer_scripts-' . $settings_suffix, array( 'THEME_SETTINGS_PAGE', 'css') );
 
 

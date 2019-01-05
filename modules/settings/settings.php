@@ -204,58 +204,54 @@ Class THEME_SETTINGS {
 
 	public static function ajax_handler() {
 
-		$answer = null;
+        $answer = null;
 
-		if ( !$_POST ) {
-			$answer = array(
-				'result'  => 'error',
-				'message' => 'No request received',
-				'source'  => __METHOD__
-			);
-		} else {
-			if ( !$_POST['command'] ) {
-				$answer = array(
-					'result'  => 'error',
-					'message' => 'No command received',
-					'source'  => __METHOD__
-				);
-			} else {
-				if ( !$_POST['settings_data'] ) {
-					$answer = array(
-						'result'  => 'error',
-						'message' => 'No settings_data received',
-						'source'  => __METHOD__
-					);
-				} else {
+        if ( !$_POST ) {
+            $answer = array(
+                'result'  => 'error',
+                'message' => 'No request received',
+                'source'  => __METHOD__
+            );
+        } else {
+            if ( !$_POST['command'] ) {
+                $answer = array(
+                    'result'  => 'error',
+                    'message' => 'No command received',
+                    'source'  => __METHOD__
+                );
+            } else {
+                if ( !$_POST['payload'] ) {
+                    $answer = array(
+                        'result'  => 'error',
+                        'message' => 'No payload received',
+                        'source'  => __METHOD__
+                    );
+                } else {
 
-					if ( $_POST['command'] == 'update' ) {
-						$answer = self::update( $_POST['settings_data'] );
-					}
+                    if ( method_exists( __CLASS__, $_POST['command'] ) ) {
+                        $command = $_POST['command'];
+                        $answer = self::$command( $_POST['payload'] );
+                    } else {
+                        $answer = array(
+                            'result'  => 'error',
+                            'message' => 'Unknown command ¯\_(ツ)_/¯',
+                            'source'  => __METHOD__
+                        );
+                    }
 
-					else if ( $_POST['command'] == 'force_default_settings' ) {
-						$answer = self::force_default_settings( $_POST['settings_data'] );
-					}
+                }
+            }
+        }
 
-					else {
-						$answer = array(
-							'result'  => 'error',
-							'message' => 'Unknown command ¯\_(ツ)_/¯',
-							'source'  => __METHOD__
-						);
-					}
-				}
-			}
-		}
-
-		if ( !$answer ) {
-			$answer = array(
-				'result'  => 'error',
-				'message' => 'Nothing Happens ¯\_(ツ)_/¯',
-				'source'  => __METHOD__
-			);
-		}
-		echo json_encode( $answer );
-		wp_die();
+        if ( !$answer ) {
+            $answer = array(
+                'result'  => 'error',
+                'message' => 'Nothing Happens ¯\_(ツ)_/¯',
+                'source'  => __METHOD__
+            );
+        }
+        echo json_encode( $answer );
+        wp_die();
 	}
 
 }

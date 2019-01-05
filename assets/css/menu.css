@@ -96,6 +96,11 @@
     display: none;
 }
 
+.left_panel.collapsed .main_menu .menu_element:hover {
+    opacity: 1;
+}
+
+
 .left_panel.collapsed .main_menu .menu_element:hover .title {
     display: inline-flex;
     justify-content: center;

@@ -27,3 +27,15 @@ function nice_field( $field ) {
     return $html;
 
 }
+
+Class NICE_FIELD {
+
+    public static function wp_enqueue() {
+        $template_directory_uri = get_template_directory_uri();
+        wp_enqueue_style('nice_field_css', $template_directory_uri . '/components/nice_fields/nice_fields.css' );
+        wp_enqueue_script( 'nice_field_js', $template_directory_uri . '/components/nice_fields/nice_fields.js' );
+    }
+
+}
+
+add_action( 'wp_enqueue_scripts', array( 'NICE_FIELD', 'wp_enqueue' ) );
