@@ -22,7 +22,17 @@ define( 'THEME_CSS', dirname( __FILE__ ) . '/assets/css/'             );
 define( 'THEME_JS',  dirname( __FILE__ ) . '/assets/js/'              );
 define( 'THEME_TMP', dirname( __FILE__ ) . '/template-parts'          );
 
+/**
+ * Admin Parts and pages
+ **/
+
 require_once( THEME_COR . 'setup.php' );
+
+
+/**
+ * WP Media for FrontEnd
+ */
+
 require_once( THEME_COR . 'front_media.php' );
 
 /**

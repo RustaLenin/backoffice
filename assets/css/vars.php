@@ -6,6 +6,7 @@
         --accent_background: #009C4F;
         --second_accent_background: #FF6600;
         --sub_bacground: #EAEAEA;
+        --accent_sub_background: #BCBCBC;
 
         /** Borders and Dividers **/
         --divider_color: #D1CFCF;

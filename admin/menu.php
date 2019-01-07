@@ -22,7 +22,7 @@ class THEME_ADMIN_MENU {
         );
 
         foreach ( $suffixes as $suffix ) {
-            add_action( 'admin_enqueue_scripts-' . $suffix, array( 'NICE_FIELD', 'wp_enqueue') );
+            add_action( 'admin_print_footer_scripts-' . $suffix, array( 'NICE_FIELD', 'wp_enqueue') );
         }
 
         /** Settings page **/

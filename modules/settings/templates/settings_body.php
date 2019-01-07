@@ -10,19 +10,19 @@
 
         <div class="settings_buttons">
 
-            <div class="ExpandAllTabsBlocks">
-                <span class="nice_svg medium"><svg><use href="#angle-double-down"></use></svg></span>
-                <span class="ExpandSettings">Expand All</span>
+            <div class="nice_button regular small ExpandAllTabsBlocks" onclick="ExpandAllTabsBlocks(this)">
+                <span class="nice_svg tiny"><svg><use href="#double_arrow_down"></use></svg></span>
+                <span class="text">Expand All</span>
             </div>
 
-            <div class="CollapseAllTabsBloocks">
-                <span class="nice_svg medium"><svg><use href="#angle-double-up"></use></svg></span>
-                <span class="CollapseSettings">Collapse All</span>
+            <div class="nice_button regular small CollapseAllTabsBloocks" onclick="CollapseAllTabsBlocks(this)">
+                <span class="nice_svg tiny"><svg><use href="#double_arrow_down"></use></svg></span>
+                <span class="text">Collapse All</span>
             </div>
 
-            <div class="UpdateSettings">
-                <span class="nice_svg medium"><svg><use href="#check"></use></svg></span>
-                <span class="settings__update_text">Save Settings</span>
+            <div class="submit_button accent small UpdateSettings">
+                <span class="nice_svg small"><svg><use href="#check"></use></svg></span>
+                <span class="text">Save Settings</span>
             </div>
 
         </div>
@@ -71,19 +71,15 @@
 
         <div class="settings_content">
 
-            <div class="tabs_wrapper">
+            <div class="tabs_content TabsContent current" data-tab="site">
 
-                <div class="tabs_content MenuContent current" data-tab="site">
+                <?php include('site_settings.php') ?>
 
-                    <?php include('site_settings.php') ?>
+            </div>
 
-                </div>
+            <div class="tabs_content TabsContent" data-tab="header">
 
-                <div class="tabs_content MenuContent" data-tab="header">
-
-                    <?php include('header_settings.php') ?>
-
-                </div>
+                <?php include('header_settings.php') ?>
 
             </div>
 
