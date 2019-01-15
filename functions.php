@@ -59,12 +59,6 @@ require_once( THEME_COR . 'filters/disable_admin_notify.php' );
 require_once( THEME_COR . 'filters/content.php' );
 
 /**
- * Re Usable components and elements
- **/
-require_once( THEME_COM . 'nice_fields/nice_fields.php' );
-require_once( THEME_COM . 'nice_settings/nice_settings.php' );
-
-/**
  * BackEnd for BO
  */
 

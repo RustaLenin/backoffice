@@ -46,4 +46,3 @@
         <div class="main_area">
 
             <div class="modal_area ModalArea CloseModal"></div>
-            <div class="notify_area NotifyArea"></div>

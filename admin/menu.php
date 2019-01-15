@@ -22,6 +22,15 @@ class THEME_ADMIN_MENU {
         );
 
         foreach ( $suffixes as $suffix ) {
+            if ( class_exists('NICE_FIELDS') ) {
+                add_action( 'admin_print_footer_scripts-' . $suffix, array( 'NICE_FIELDS', 'wp_enqueue') );
+                add_action( 'admin_print_footer_scripts-' . $suffix, array( 'NICE_TEMPLATES', 'wp_enqueue') );
+                add_action( 'admin_print_footer_scripts-' . $suffix, array( 'NICE_SVG', 'simple_import') );
+                add_action( 'admin_print_footer_scripts-' . $suffix, array( 'NICE_BUTTONS', 'wp_enqueue') );
+                add_action( 'admin_print_footer_scripts-' . $suffix, array( 'NICE_NOTIFICATIONS', 'wp_enqueue') );
+                add_action( 'admin_print_footer_scripts-' . $suffix, array( 'NICE_SETTINGS', 'wp_enqueue') );
+            }
+
             add_action( 'admin_print_footer_scripts-' . $suffix, array( 'NICE_FIELD', 'wp_enqueue') );
         }
 
