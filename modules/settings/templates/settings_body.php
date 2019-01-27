@@ -20,7 +20,7 @@
                 <span class="text">Collapse All</span>
             </div>
 
-            <div class="submit_button accent small UpdateSettings">
+            <div class="nice_submit accent small UpdateSettings">
                 <span class="nice_svg small"><svg><use href="#check"></use></svg></span>
                 <span class="text">Save Settings</span>
             </div>

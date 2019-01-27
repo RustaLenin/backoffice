@@ -15,6 +15,8 @@ console.log('index.js loaded...');
 
 jQuery(document).ready( function () {
 
+    Nice.insertCssVars( 'notFound' );
+
     HandleDocumentInterface();
     HandleModal();
     ClearEditable();

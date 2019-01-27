@@ -14,8 +14,6 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
-@import 'assets/css/buttons.css';
-@import 'assets/css/icons.css';
 @import 'assets/css/table.css';
 @import 'assets/css/notify.css';
 @import 'assets/css/modals.css';
@@ -64,7 +62,8 @@ img {
 }
 
 .site .site_content {
-    max-width: 840px;
+    display: flex;
+    justify-content: center;
     margin: 0 auto;
     padding: 32px;
 }
@@ -104,8 +103,15 @@ img {
     color: var( --accent_hover_font_color );
 }
 
+.breadcrumbs_container .kb_sep {
+    margin: 0 8px;
+}
+
 .services_content {
-    width: 100%;
+    width: auto;
+    max-width: 960px;
+    background-color: #fff;
+    padding: 32px
 }
 
 .loader {

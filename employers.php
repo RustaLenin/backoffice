@@ -1,6 +1,7 @@
 <?php
+
 /**
- * The template for displaying author page.
+ * Template Name: BackOffice Employers Page
  *
  * @package BackOffice
  */
@@ -13,13 +14,22 @@ function load_page_assets() {
 }
 add_action( 'wp_print_footer_scripts', 'load_page_assets' );
 
-get_header();
-
-?>
+get_header(); ?>
 
     <div class="site_content">
 
-        <?php include('modules/employers/templates/user_page.php'); ?>
+        <div class="employers_content">
+
+            <div class="header">
+                <span class="breadcrumbs_container"><?php echo kama_breadcrumbs(' » '); ?> » </span>
+                <h1 class="page_title">Employers</h1>
+            </div>
+
+            <div class="body">
+                <?php include ('modules/employers/templates/query.php'); ?>
+            </div>
+
+        </div>
 
     </div>
 

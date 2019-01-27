@@ -57,6 +57,7 @@ require_once( THEME_MOD . 'quick_tags.php' );
 require_once( THEME_MOD . 'dereg.php' );
 require_once( THEME_COR . 'filters/disable_admin_notify.php' );
 require_once( THEME_COR . 'filters/content.php' );
+require_once( THEME_COR . 'filters/uri_base.php' );
 
 /**
  * BackEnd for BO

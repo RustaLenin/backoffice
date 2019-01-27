@@ -19,7 +19,7 @@
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <link rel="canonical" href="<?php echo get_site_url(); ?>"/>
     <script src="//code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="<?php echo get_template_directory_uri();?>/assets/js/index.js" type="module"></script>
+
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/assets/fonts/text-security-disc.css'; ?>">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <?php
@@ -34,10 +34,7 @@
 
 <body>
 
-<?php
-  	include ('template-parts/svg/sprite.php');
-  	include ('assets/css/vars.php');
-?>
+<?php include ('template-parts/svg/sprite.php'); ?>
 
     <div class="site">
 

@@ -27,10 +27,6 @@ get_header(); ?>
             <div class="body">
                 <?php include ('modules/services/templates/body.php'); ?>
             </div>
-            <div class="sidebar">
-                <?php include ('modules/services/templates/filters.php'); ?>
-            </div>
-
 
         </div>
 

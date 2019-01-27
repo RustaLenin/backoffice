@@ -21,6 +21,7 @@
 
     /* ]]> */
 </script>
+<script src="<?php echo get_template_directory_uri();?>/assets/js/index.js" type="module"></script>
 
 </body>
 </html>

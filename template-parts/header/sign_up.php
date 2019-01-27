@@ -25,5 +25,5 @@ echo nice_field( array(
 ?>
 
 <div class="form_footer">
-    <span class="submit_button w100 SubmitSignUp disabled">Submit</span>
+    <span class="nice_submit w100 SubmitSignUp disabled">Submit</span>
 </div>

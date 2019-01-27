@@ -100,18 +100,10 @@ Class THEME_REGISTER {
         wp_enqueue_script( 'ejs',   $template_directory_uri . '/assets/libs/ejs/ejs.js' );
         wp_enqueue_script( 'date_picker_script', $template_directory_uri . '/assets/libs/datepicker/datepicker.js', array('jquery') );
         wp_enqueue_style(  'date_picker_styles', $template_directory_uri . '/assets/libs/datepicker/datepicker.min.css' );
-        wp_enqueue_script( 'nice_fields', $template_directory_uri . '/components/nice_fields/nice_fields.js' );
-    }
 
-    public static function scripts() {
-//        wp_enqueue_script( 'theme_logic_script', get_template_directory_uri() . '/assets/js/logic.js' );
-//        wp_enqueue_script( 'theme_data_script', get_template_directory_uri() . '/assets/js/data.js' );
-//        wp_enqueue_script( 'theme_behavior_script', get_template_directory_uri() . '/assets/js/behavior.js' );
-//        wp_enqueue_script( 'theme_render_script', get_template_directory_uri() . '/assets/js/render.js' );
-//        wp_enqueue_script( 'theme_fields_script', get_template_directory_uri() . '/assets/js/fields.js' );
-//        wp_enqueue_script( 'theme_forms_script', get_template_directory_uri() . '/assets/js/forms.js' );
-//        wp_enqueue_script( 'theme_interface_script', get_template_directory_uri() . '/assets/js/interface.js' );
-//        wp_enqueue_script( 'theme_index_script', get_template_directory_uri() . '/assets/js/index.js' );
+        if ( class_exists('NICE_FRAMEWORK') ) {
+            NICE_FRAMEWORK::wp_enqueue_all();
+        }
     }
 
     public static function components() {
@@ -135,5 +127,4 @@ add_action( 'after_setup_theme',  array( 'THEME_REGISTER', 'framework_styles'   
 add_action( 'widgets_init',       array( 'THEME_REGISTER', 'widgets_init'        ) );
 add_action( 'wp_enqueue_scripts', array( 'THEME_REGISTER', 'styles'              ) );
 add_action( 'wp_enqueue_scripts', array( 'THEME_REGISTER', 'external_libraries'  ) );
-add_action( 'wp_enqueue_scripts', array( 'THEME_REGISTER', 'scripts'             ) );
 add_action( 'wp_enqueue_scripts', array( 'THEME_REGISTER', 'components'          ) );
