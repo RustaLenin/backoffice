@@ -36,10 +36,9 @@
 
 <?php include ('template-parts/svg/sprite.php'); ?>
 
+<div class="modal_area ModalArea CloseModal"></div>
+
     <div class="site">
 
-    <?php include( 'template-parts/header-content.php'); ?>
+    <?php include( 'modules/header/templates/content.php'); ?>
 
-        <div class="main_area">
-
-            <div class="modal_area ModalArea CloseModal"></div>

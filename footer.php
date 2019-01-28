@@ -1,5 +1,4 @@
 <?php include ('template-parts/footer-content.php'); ?>
-        </div> <!-- Main Area -->
     </div> <!-- Site -->
 <?php
     wp_footer();

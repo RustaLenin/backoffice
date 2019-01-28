@@ -5,7 +5,7 @@ if ( !$user->position ) { $user->position = 'Developer'; }
 
 ?>
 
-<div class="user_page">
+<div class="user_page UserPage">
 
     <div class="info_panel">
 
@@ -19,58 +19,103 @@ if ( !$user->position ) { $user->position = 'Developer'; }
 
         <span class="position"><?php echo $user->position ?></span>
 
-        <div class="description">
-            <?php echo $user->user_description; ?>
+        <div class="tabs_container">
+
+            <?php
+            $tabs = [
+                '0' => [
+                    'slug' => 'profile',
+                    'label' => 'Profile',
+                    'icon' => 'user',
+                    'if_logged_in' => false,
+                    'if_manage_users' => false,
+                    'current' => true,
+                ],
+                '1' => [
+                    'slug' => 'blog',
+                    'label' => 'Blog',
+                    'icon' => 'article',
+                    'if_logged_in' => false,
+                    'if_manage_users' => false,
+                    'current' => false,
+                ],
+                '2' => [
+                    'slug' => 'docs',
+                    'label' => 'Documents',
+                    'icon' => 'images',
+                    'if_logged_in' => true,
+                    'if_manage_users' => true,
+                    'current' => false,
+                ],
+                '3' => [
+                    'slug' => '',
+                    'label' => '',
+                    'icon' => '',
+                    'if_logged_in' => '',
+                    'if_manage_users' => '',
+                    'current' => false,
+                ],
+                '4' => [
+                    'slug' => '',
+                    'label' => '',
+                    'icon' => '',
+                    'if_logged_in' => '',
+                    'if_manage_users' => '',
+                    'current' => false,
+                ],
+            ];
+            foreach ( $tabs as $tab ) {
+
+                if ( $tab['slug'] ) {
+                    if ( $tab['if_manage_users'] ) {
+                        if ( current_user_can('edit_users') ) {
+                            include('tab_item.php');
+                        }
+                    } else if ( !$tab['if_manage_users'] && $tab['if_logged_in']) {
+                        if ( is_user_logged_in() ) {
+                            include('tab_item.php');
+                        }
+                    } else if ( !$tab['if_manage_users'] && !$tab['if_logged_in']) {
+                        include('tab_item.php');
+                    }
+                }
+
+            }
+            ?>
+
         </div>
-
-        <?php if ( is_user_logged_in() ) { ?>
-
-        <div class="part">
-
-            <span class="part_title">
-                Contacts
-            </span>
-
-            <div class="part_content">
-
-                <span class="contact_item">
-                    <?php echo nice_svg(['key' => 'email', 'size' => 'small'] ); ?>
-                    <span class="value"><a href="mailto:<?php echo $user->user_email; ?>"><?php echo $user->user_email; ?></a></span>
-                </span>
-
-                <?php if ( $user->phone ) { ?>
-
-                    <span class="contact_item">
-                        <?php echo nice_svg(['key' => 'smartphone', 'size' => 'small'] ); ?>
-                        <span class="value"><a href="tel:<?php echo $user->phone; ?>"><?php echo $user->phone; ?></a></span>
-                    </span>
-
-                <?php } ?>
-
-                <?php if ( $user->slack ) { ?>
-
-                    <span class="contact_item">
-                    <?php echo nice_svg(['key' => 'at', 'size' => 'small'] ); ?>
-                        <span class="value"><?php echo $user->slack; ?></span>
-                    </span>
-
-                <?php } ?>
-
-            </div>
-
-        </div>
-
-        <?php } ?>
 
     </div>
 
     <div class="user_page__content">
 
-        <div class="tabs_container">
-
-        </div>
-
         <div class="tabs_content">
+
+            <?php foreach ( $tabs as $tab ) {
+
+                if ($tab['slug']) {?>
+                <div class="tab TabItem <?php if($tab['current'] ) { echo 'current'; } ?>" data-tab="<?php echo $tab['slug']; ?>">
+
+                    <?php
+
+                        if ($tab['if_manage_users']) {
+                            if (current_user_can('edit_users')) {
+                                include('tabs/' . $tab['slug'] . '.php');
+                            }
+                        } else if (!$tab['if_manage_users'] && $tab['if_logged_in']) {
+                            if (is_user_logged_in()) {
+                                include('tabs/' . $tab['slug'] . '.php');
+                            }
+                        } else if (!$tab['if_manage_users'] && !$tab['if_logged_in']) {
+                            include('tabs/' . $tab['slug'] . '.php');
+                        }
+
+                    ?>
+
+                </div>
+            <?php }
+
+            }?>
 
         </div>
 

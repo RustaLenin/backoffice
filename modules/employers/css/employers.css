@@ -160,23 +160,27 @@
 .user_page {
     display: grid;
     grid-template-columns: auto 1fr;
+    grid-gap: 32px;
     width: 100%;
     height: auto;
-    background-color: var( --content_background );
 }
 
 .user_page .info_panel {
     display: flex;
     flex-direction: column;
-    max-width: 320px;
+    width: 260px;
     padding: 16px;
+    background-color: var( --content_background );
+    box-shadow: 2px 2px 6px 2px #66666666;
+    position: sticky;
+    top: 112px;
+    height: fit-content;
 }
 
 .user_page .info_panel .avatar {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 16px;
 }
 
 .user_page .info_panel .avatar img {
@@ -201,51 +205,100 @@
     color: var( --sub_font_color );
 }
 
-.user_page .info_panel .description {
-    font-size: 14px;
-    color: var(--second_font_color);
-    margin-bottom: 8px;
-}
-
-.user_page .info_panel .part {
-    margin-bottom: 8px;
-}
-.user_page .info_panel .part_title {
-    display: flex;
-    border-bottom: 1px solid var( --divider_color );
-    padding-bottom: 4px;
-    font-weight: 600;
-    color: var(--second_font_color);
-    margin-bottom: 8px;
-}
-
-.user_page .info_panel .part_content {
+.user_page .tabs_container {
     display: flex;
     flex-direction: column;
 }
 
-.user_page .info_panel .contact_item {
+.user_page .tabs_container .tab_item {
     display: flex;
-    margin-bottom: 8px;
+    align-items: center;
+    position: relative;
+    height: 50px;
+    padding: 0 8px;
+    border-top: 1px solid var( --divider_color );
+    background: var( --content_background );
+    cursor: pointer;
 }
 
-.user_page .info_panel .contact_item svg {
+.user_page .tabs_container .tab_item .nice_svg {
     margin-right: 8px;
 }
 
-.user_page .info_panel .contact_item a {
-    font-size: 14px;
-    color: var( --second_font_color );
-    text-decoration: none;
+.user_page .tabs_container .tab_item svg {
+    fill: var( --unactive_icon_color );
+}
+
+.user_page .tabs_container .tab_item .label {
+    color: var( --sub_font_color );
+    transition: 0.4s;
+}
+
+.user_page .tabs_container .tab_item:hover {
+
+}
+
+.user_page .tabs_container .tab_item:hover svg {
+    fill: var( --accent_hover_icon_color );
+}
+
+.user_page .tabs_container .tab_item:hover .label {
+    color: var( --accent_hover_font_color );
+}
+
+.user_page .tabs_container .tab_item.current {
+
+}
+
+.user_page .tabs_container .tab_item.current svg {
+    fill: var( --accent_icon_color );
+}
+
+.user_page .tabs_container .tab_item.current .label {
+    color: var( --accent_font_color );
+}
+
+.user_page .user_page__content {
+
+}
+
+.user_page .tabs_content {
+    display: flex;
+    flex-direction: column;
+}
+
+.user_page .tab {
+    display: flex;
+    flex-direction: column;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
     transition: var( --regular_transition );
 }
-
-.user_page .info_panel .contact_item a:hover {
-    color: var( --accent_font_color );
-    text-decoration: underline;
+.user_page .tab.current {
+    height: auto;
+    visibility: visible;
+    opacity: 1;
 }
 
-.user_page .info_panel .contact_item {
-    font-size: 14px;
-    color: var( --second_font_color );
+.user_page .tab .tab_title {
+    font-size: 24px;
+    font-family: var( --regular_font_family );
+    color: var( --accent_font_color );
+    margin: 0 0 16px 0;
+}
+
+.user_page .tab div {
+    height: 0;
+}
+
+.user_page .tab.current div {
+    height: auto;
+}
+
+.profile_cards,
+.user_feed {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 16px;
 }
