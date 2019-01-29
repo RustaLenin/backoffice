@@ -274,6 +274,7 @@
     visibility: hidden;
     opacity: 0;
     transition: var( --regular_transition );
+    overflow: hidden;
 }
 .user_page .tab.current {
     height: auto;
@@ -288,17 +289,86 @@
     margin: 0 0 16px 0;
 }
 
-.user_page .tab div {
-    height: 0;
+.profile_cards {
+    column-count: 2;
+    column-gap: 16px;
+    column-width: fill-available;
 }
 
-.user_page .tab.current div {
-    height: auto;
+.profile_cards .nice_metabox {
+    width: 100%;
 }
 
-.profile_cards,
+.nice_metabox .profile_meta {
+    margin-bottom: 8px;
+    display: flex;
+}
+
+.nice_metabox .profile_meta .key {
+    margin-right: 8px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    min-width: 120px;
+}
+
+.nice_metabox .profile_meta .key .nice_svg {
+    margin-right: 8px;
+}
+
+.nice_metabox .profile_meta .value {
+
+}
+
 .user_feed {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 16px;
+}
+
+.user_docs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 16px;
+}
+
+.user_docs .document_container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    transition: var( --regular_transition );
+    cursor: pointer;
+}
+
+.user_docs .document_container a {
+    line-height: 0;
+}
+
+.user_docs .document_container img {
+    object-fit: contain;
+}
+
+.user_docs .document_container .caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #00000088;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 4px 16px;
+}
+
+.user_docs .document_container .caption .title {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.user_docs .document_container .caption .description {
+    font-size: 15px;
+}
+
+.user_docs .document_container:hover {
+    transform: scale( 1.05 );
 }

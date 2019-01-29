@@ -1,7 +1,8 @@
 <?php
 
 $user = get_user_by( 'ID', $author );
-if ( !$user->position ) { $user->position = 'Developer'; }
+$user_position = get_user_meta($user->ID, 'position', true );
+if ( !$user_position ) { $user_position = 'Worker'; }
 
 ?>
 
@@ -17,7 +18,7 @@ if ( !$user->position ) { $user->position = 'Developer'; }
             <?php echo $user->last_name . ' ' . $user->first_name; ?>
         </span>
 
-        <span class="position"><?php echo $user->position ?></span>
+        <span class="position"><?php echo $user_position; ?></span>
 
         <div class="tabs_container">
 
@@ -48,11 +49,11 @@ if ( !$user->position ) { $user->position = 'Developer'; }
                     'current' => false,
                 ],
                 '3' => [
-                    'slug' => '',
-                    'label' => '',
-                    'icon' => '',
-                    'if_logged_in' => '',
-                    'if_manage_users' => '',
+                    'slug' => 'images',
+                    'label' => 'Images',
+                    'icon' => 'images',
+                    'if_logged_in' => true,
+                    'if_manage_users' => true,
                     'current' => false,
                 ],
                 '4' => [
