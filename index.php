@@ -17,25 +17,15 @@ add_action( 'wp_print_footer_scripts', 'load_page_assets' );
 get_header(); ?>
 
     <div class="site_content">
-		<?php
-        if ( have_posts() ) { ?>
-            <div class="article_feed">
-            <?php while ( have_posts() ) {
-                the_post();
-                include('modules/blog/templates/post_card.php');
+		<div style="display: flex; flex-direction: column">
+            <span class="nice_button large" style="margin-bottom:12px;" onClick="Nice.notify({'type': 'success'})">Success</span>
+            <span class="nice_button medium accent" style="margin-bottom:12px;" onClick="Nice.notify({'type': 'info'})">Info</span>
+            <span class="nice_button small" style="margin-bottom:12px;" onClick="Nice.notify({'type': 'warning'})">Warning</span>
+            <span class="nice_button tiny accent" style="margin-bottom:12px;" onClick="Nice.notify({'type': 'error'})">Error</span>
 
-            } ?>
-            </div>
-            <?php
-        }
-
-
-		the_posts_pagination( array(
-			'mid_size' => 2,
-			'prev_text' => __( 'Prev', 'theme' ),
-			'next_text' => __( 'Next', 'theme' ),
-		) );
-		?>
+            <span class="nice_submit medium accent" style="margin-bottom:12px;" onClick="">1</span>
+            <span class="nice_submit medium " style="margin-bottom:12px;" onClick="">2</span>
+        </div>
     </div>
 
 <?php

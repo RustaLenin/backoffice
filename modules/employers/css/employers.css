@@ -328,8 +328,8 @@
 
 .user_docs {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 16px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 24px;
 }
 
 .user_docs .document_container {

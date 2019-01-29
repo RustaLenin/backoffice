@@ -9,13 +9,12 @@ import { CollectData, AjaxSend } from './data.js';
 import { AddOverlay, ClearOverlay } from './components/overlay.js';
 import { WPMediaForFields } from './wp_staff.js';
 
-window.Notify = Notify;
-
 console.log('index.js loaded...');
 
 jQuery(document).ready( function () {
 
     Nice.insertCssVars( 'notFound' );
+    Nice.insertNotifyArea();
 
     HandleDocumentInterface();
     HandleModal();
