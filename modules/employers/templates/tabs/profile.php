@@ -72,43 +72,47 @@
 
     </div>
 
-    <div class="nice_metabox niceMetaBox">
+    <?php if ( is_user_logged_in() && current_user_can('edit_users') ) { ?>
 
-        <div class="head" onclick="Nice.toggleMetaBox( this );">
+        <div class="nice_metabox niceMetaBox">
+
+            <div class="head" onclick="Nice.toggleMetaBox( this );">
             <span class="title">
                 <span class="about_icon"><?php echo nice_svg(['key' => 'cog', 'size' => 'tiny']); ?></span>
                 Work info
             </span>
-            <span class="collapse_icon">
+                <span class="collapse_icon">
                 <?php echo nice_svg(['key' => 'arrow_down', 'size' => 'tiny' ]); ?>
             </span>
-        </div>
+            </div>
 
-        <div class="body">
+            <div class="body">
 
             <span class="profile_meta">
                 <span class="key">Position:</span>
                 <span class="value"><?php echo $user_position; ?></span>
             </span>
 
-            <span class="profile_meta">
+                <span class="profile_meta">
                 <span class="key">Salary:</span>
                 <span class="value"><?php $salary = get_user_meta( $user->ID, 'salary', true ); if ( !$salary ) { echo 'Unknown'; } else { echo $salary . ' ' . get_user_meta( $user->ID, 'salary_currency', true ); } ?></span>
             </span>
 
-            <span class="profile_meta">
+                <span class="profile_meta">
                 <span class="key">First day:</span>
                 <span class="value"><?php $first_day = get_user_meta($user->ID, 'first_day', true ); if ( $first_day ) { echo $first_day; } else { echo 'Unknown'; } ?></span>
             </span>
 
-            <span class="profile_meta">
+                <span class="profile_meta">
                 <span class="key">Description:</span>
                 <span class="value"><?php echo $user->description; ?></span>
             </span>
 
+            </div>
+
         </div>
 
-    </div>
+    <?php } ?>
 
     <div class="nice_metabox niceMetaBox">
 

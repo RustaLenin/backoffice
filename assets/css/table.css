@@ -125,7 +125,7 @@
 
 .nice_table.sticky .head .row .cell{
     position: sticky;
-    top: 0;
+    top: 81px;
     z-index: 5;
 }
 
