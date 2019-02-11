@@ -32,9 +32,9 @@
 
                 if ( typeof A['field_class'] === 'undefined' ) { A['field_class'] = 'ModalInput' }
                 else { A['field_class'] = args['field_class'] + ' ModalInput'; }
-
+                console.log( A );
             %>
-                <%- NiceField( A ); %>
+                <%- Nice.field( A ); %>
             <% }
         }); %>
 

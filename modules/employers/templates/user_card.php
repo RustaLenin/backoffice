@@ -34,10 +34,10 @@
                     if ( !empty( $skills ) ) {
                         foreach ( $skills as $skill ) { ?>
                             <span class="skill">
-                            <a href="<?php echo get_term_link( (int) $skill['term_id'], 'skill' ); ?>">
-                                <?php echo $skill['name']; ?>
-                            </a>
-                        </span>
+                                <a href="<?php echo get_term_link( (int) $skill['term_id'], 'skill' ); ?>">
+                                    <?php echo $skill['name']; ?>
+                                </a>
+                            </span>
                         <?php }
                     }
                     ?>

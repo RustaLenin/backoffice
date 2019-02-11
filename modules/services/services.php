@@ -2,7 +2,7 @@
 
 Class BO_SERVICES {
 
-    static $post_type = 'service';
+    static $post_type = 'services';
     static $def_post_status = 'publish';
 
     static $model = array(
