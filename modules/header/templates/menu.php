@@ -5,19 +5,19 @@ $uri_parts = explode('/', $_SERVER['REQUEST_URI'] );
 $menu = array(
     'element_1' => array(
         'icon_id' => '1',
-        'title' => 'Main page',
+        'title' => 'Главная',
         'href' => get_bloginfo('url'),
         'current' => is_front_page()
     ),
     'element_2' => array(
         'icon_id' => '1',
-        'title' => 'Services',
+        'title' => 'Сервисы',
         'href' => '/services/',
         'current' => in_array('services', $uri_parts )
     ),
     'element_3' => array(
         'icon_id' => '1',
-        'title' => 'Employers',
+        'title' => 'Сотрудники',
         'href' => '/employers',
         'current' => in_array('employers', $uri_parts )
    ),
@@ -35,13 +35,13 @@ $menu = array(
     ),
     'element_6' => array(
         'icon_id' => '1',
-        'title' => 'Our Vacancies',
+        'title' => 'Вакансии',
         'href' => '#',
         'current' => in_array('vacancies', $uri_parts )
     ),
     'element_7' => array(
         'icon_id' => '1',
-        'title' => 'Blog',
+        'title' => 'Блог',
         'href' => '#',
         'current' => in_array('blog', $uri_parts )
     ),
