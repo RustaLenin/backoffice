@@ -1,0 +1,77 @@
+.requests_navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 960px;
+    background-color: #fff;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.requests_table {
+    display: flex;
+    flex-direction: column;
+    max-width: 960px;
+    background-color: #fff;
+    padding: 16px;
+}
+
+.request_row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var( --divider_color );
+}
+
+.request_row:last-of-type {
+    border-bottom: none;
+}
+
+.request_row > div {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+}
+
+.request_icon {
+
+}
+
+.request_employer {
+
+}
+
+.request_employer img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.request_type {
+
+}
+
+.request_boss {
+
+}
+
+.request_boss img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.request_status {
+
+}
+
+.request_approve {
+
+}
+
+.request_edit {
+
+}

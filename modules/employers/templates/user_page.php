@@ -23,45 +23,38 @@ if ( !$user_position ) { $user_position = 'Worker'; }
         <div class="tabs_container">
 
             <?php
-            $tabs = [
-                '0' => [
+            $tabs =
+            [
+                [
                     'slug' => 'profile',
-                    'label' => 'Profile',
+                    'label' => 'Профиль',
                     'icon' => 'user',
                     'if_logged_in' => false,
                     'if_manage_users' => false,
                     'current' => true,
                 ],
-                '1' => [
+                [
+                    'slug' => 'requests',
+                    'label' => 'Заявки',
+                    'icon' => 'user',
+                    'if_logged_in' => false,
+                    'if_manage_users' => false,
+                    'current' => false,
+                ],
+                [
                     'slug' => 'blog',
-                    'label' => 'Blog',
+                    'label' => 'Блог',
                     'icon' => 'article',
                     'if_logged_in' => false,
                     'if_manage_users' => false,
                     'current' => false,
                 ],
-                '2' => [
-                    'slug' => 'docs',
-                    'label' => 'Documents',
-                    'icon' => 'images',
-                    'if_logged_in' => true,
-                    'if_manage_users' => true,
-                    'current' => false,
-                ],
-                '3' => [
+                [
                     'slug' => 'images',
-                    'label' => 'Images',
+                    'label' => 'Картинки пользователя',
                     'icon' => 'images',
                     'if_logged_in' => true,
                     'if_manage_users' => true,
-                    'current' => false,
-                ],
-                '4' => [
-                    'slug' => '',
-                    'label' => '',
-                    'icon' => '',
-                    'if_logged_in' => '',
-                    'if_manage_users' => '',
                     'current' => false,
                 ],
             ];

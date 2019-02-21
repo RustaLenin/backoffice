@@ -146,9 +146,9 @@ export function ValidateField( Validate ) {
 
 export function HandleFieldsValidate( selector ) {
 
-    let input = jQuery( selector ).find('.input');
+    let inputs = jQuery( selector ).find('.input');
 
-    input.each( function () {
+    inputs.each( function () {
 
         let ThisField = jQuery( this );
         let ValidType = ThisField .attr('data-validation');

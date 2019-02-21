@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Ingot - Theme functions and definitions.
+ * BackOffice - Theme functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
@@ -64,6 +64,7 @@ require_once( THEME_COR . 'filters/uri_base.php' );
  */
 
 require_once( THEME_MOD . 'services/services.php' );
+require_once( THEME_MOD . 'requests/request.php' );
 require_once( THEME_MOD . 'user/user.php' );
 
 @ini_set( 'upload_max_size' , '500M' );

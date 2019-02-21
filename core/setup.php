@@ -110,20 +110,10 @@ Class THEME_REGISTER {
 //        wp_enqueue_script( 'theme_overlay_component', get_template_directory_uri() . '/assets/js/components/overlay.js' );
     }
 
-    public static function framework_styles() {
-
-	    /** Are you really need it? **/
-//        if ( class_exists( 'ITFF_INSERT' ) ) {
-//            add_action( 'wp_enqueue_scripts', array( 'ITFF_INSERT', 'styles' ) );
-//        }
-
-    }
-
 }
 
 add_action( 'after_setup_theme',  array( 'THEME_REGISTER', 'setup'               ) );
 add_action( 'after_setup_theme',  array( 'THEME_REGISTER', 'setup_defaults'      ) );
-add_action( 'after_setup_theme',  array( 'THEME_REGISTER', 'framework_styles'    ) );
 add_action( 'widgets_init',       array( 'THEME_REGISTER', 'widgets_init'        ) );
 add_action( 'wp_enqueue_scripts', array( 'THEME_REGISTER', 'styles'              ) );
 add_action( 'wp_enqueue_scripts', array( 'THEME_REGISTER', 'external_libraries'  ) );

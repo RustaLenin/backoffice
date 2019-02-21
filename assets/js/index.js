@@ -13,6 +13,8 @@ console.log('index.js loaded...');
 
 jQuery(document).ready( function () {
 
+    window.AjaxSend = AjaxSend;
+
     Nice.insertCssVars( 'notFound' );
     Nice.insertNotifyArea();
 

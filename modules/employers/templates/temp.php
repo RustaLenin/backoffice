@@ -15,14 +15,14 @@
         <div class="part_content">
 
                 <span class="contact_item">
-                    <?php echo nice_svg(['key' => 'email', 'size' => 'small'] ); ?>
+                    <?php echo nice_svg(['id' => 'email', 'size' => 'small'] ); ?>
                     <span class="value"><a href="mailto:<?php echo $user->user_email; ?>"><?php echo $user->user_email; ?></a></span>
                 </span>
 
             <?php if ( $user->phone ) { ?>
 
                 <span class="contact_item">
-                        <?php echo nice_svg(['key' => 'smartphone', 'size' => 'small'] ); ?>
+                        <?php echo nice_svg(['id' => 'smartphone', 'size' => 'small'] ); ?>
                         <span class="value"><a href="tel:<?php echo $user->phone; ?>"><?php echo $user->phone; ?></a></span>
                     </span>
 
@@ -31,7 +31,7 @@
             <?php if ( $user->slack ) { ?>
 
                 <span class="contact_item">
-                    <?php echo nice_svg(['key' => 'at', 'size' => 'small'] ); ?>
+                    <?php echo nice_svg(['id' => 'at', 'size' => 'small'] ); ?>
                         <span class="value"><?php echo $user->slack; ?></span>
                     </span>
 

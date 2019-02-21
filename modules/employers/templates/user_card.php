@@ -45,7 +45,7 @@
 
                 <div>
                     <?php  if ( current_user_can( 'edit_users') ) {
-                        echo nice_svg( ['key' => 'cog', 'size' => 'small', 'click_able' => true ] );
+                        echo nice_svg( ['id' => 'cog', 'size' => 'small', 'click_able' => true ] );
                     } ?>
                 </div>
 

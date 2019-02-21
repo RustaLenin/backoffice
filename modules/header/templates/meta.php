@@ -1,6 +1,6 @@
 <?php
 
-echo '<div class="search_container">' . nice_svg( ['key' => 'search', 'size'=> 'small', 'click_able' => true] ) . '</div>';
+echo '<div class="search_container">' . nice_svg( ['id' => 'search', 'size'=> 'small', 'click_able' => true] ) . '</div>';
 
 if ( is_user_logged_in() ) {
     $current_user = get_user_by( 'ID', get_current_user_id() );
@@ -11,7 +11,7 @@ if ( is_user_logged_in() ) {
     <div class="header_profile">
         <img class="profile_avatar" src="<?php echo $current_user_avatar['guid']; ?>">
         <div class="profile_content">
-            <span class="profile_title"><?php echo $current_user->last_name . ' ' . $current_user->first_name; ?><?php echo nice_svg(['key' => 'arrow_down', 'size' => 'micro']); ?></span>
+            <span class="profile_title"><?php echo $current_user->last_name . ' ' . $current_user->first_name; ?><?php echo nice_svg(['id' => 'arrow_down', 'size' => 'micro']); ?></span>
             <span class="profile_position"><?php echo get_user_meta( get_current_user_id(), 'position', true ); ?></span>
         </div>
     </div>
@@ -19,7 +19,7 @@ if ( is_user_logged_in() ) {
 
     <?php
 } else {
-    echo nice_svg( ['key' => 'sign_in', 'size'=> 'small'] );
+    echo nice_svg( ['id' => 'sign_in', 'size'=> 'small'] );
 }
 
 ?>

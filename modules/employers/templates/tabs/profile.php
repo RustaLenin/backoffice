@@ -10,28 +10,28 @@
 
         <div class="head" onclick="Nice.toggleMetaBox( this );">
             <span class="title">
-                <span class="about_icon"><?php echo nice_svg(['key' => 'cog', 'size' => 'tiny']); ?></span>
+                <span class="about_icon"><?php echo nice_svg(['id' => 'cog', 'size' => 'tiny']); ?></span>
                 BIO
             </span>
             <span class="collapse_icon">
-                <?php echo nice_svg(['key' => 'arrow_down', 'size' => 'tiny' ]); ?>
+                <?php echo nice_svg(['id' => 'arrow_down', 'size' => 'tiny' ]); ?>
             </span>
         </div>
 
         <div class="body">
 
             <span class="profile_meta">
-                <span class="key"><?php echo nice_svg(['key' => 'user', 'size' => 'tiny']); ?> Name:</span>
+                <span class="key"><?php echo nice_svg(['id' => 'user', 'size' => 'tiny']); ?> Name:</span>
                 <span class="value"><?php echo $user->last_name . ' ' . $user->first_name; ?></span>
             </span>
 
             <span class="profile_meta">
-                <span class="key"><?php echo nice_svg(['key' => 'calendar', 'size' => 'tiny']); ?> Birth date:</span>
+                <span class="key"><?php echo nice_svg(['id' => 'calendar', 'size' => 'tiny']); ?> Birth date:</span>
                 <span class="value"><?php $birth_date = get_user_meta($user->ID, 'birth_date', true ); if ( $birth_date ) { echo $birth_date; } else { echo 'No birth date stored'; } ?></span>
             </span>
 
             <span class="profile_meta">
-                <span class="key"><?php echo nice_svg(['key' => 'language', 'size' => 'tiny']); ?> Speaks:</span>
+                <span class="key"><?php echo nice_svg(['id' => 'language', 'size' => 'tiny']); ?> Speaks:</span>
                 <span class="value"><?php $user_language = get_user_meta($user->ID, 'language', true ); if ( $user_language ) { echo $user_language; } else { echo 'Unknown'; } ?></span>
             </span>
 
@@ -43,28 +43,28 @@
 
         <div class="head" onclick="Nice.toggleMetaBox( this );">
             <span class="title">
-                <span class="about_icon"><?php echo nice_svg(['key' => 'cog', 'size' => 'tiny']); ?></span>
+                <span class="about_icon"><?php echo nice_svg(['id' => 'cog', 'size' => 'tiny']); ?></span>
                 Contacts
             </span>
             <span class="collapse_icon">
-                <?php echo nice_svg(['key' => 'arrow_down', 'size' => 'tiny' ]); ?>
+                <?php echo nice_svg(['id' => 'arrow_down', 'size' => 'tiny' ]); ?>
             </span>
         </div>
 
         <div class="body">
 
             <span class="profile_meta">
-                <span class="key"><?php echo nice_svg(['key' => 'email', 'size' => 'tiny']); ?> Email:</span>
+                <span class="key"><?php echo nice_svg(['id' => 'email', 'size' => 'tiny']); ?> Email:</span>
                 <span class="value"><?php echo $user->user_email; ?></span>
             </span>
 
             <span class="profile_meta">
-                <span class="key"><?php echo nice_svg(['key' => 'smartphone', 'size' => 'tiny']); ?> Phone:</span>
+                <span class="key"><?php echo nice_svg(['id' => 'smartphone', 'size' => 'tiny']); ?> Phone:</span>
                 <span class="value"><?php $user_phone = get_user_meta($user->ID, 'phone', true ); if ( $user_phone ) { echo $user_phone; } else { echo 'No phone stored'; } ?></span>
             </span>
 
             <span class="profile_meta">
-                <span class="key"><?php echo nice_svg(['key' => 'at', 'size' => 'tiny']); ?> Slack:</span>
+                <span class="key"><?php echo nice_svg(['id' => 'at', 'size' => 'tiny']); ?> Slack:</span>
                 <span class="value"><?php $user_slack = get_user_meta($user->ID, 'slack', true ); if ( $user_slack ) { echo $user_slack; } else { echo 'No slack account stored'; } ?></span>
             </span>
 
@@ -78,11 +78,11 @@
 
             <div class="head" onclick="Nice.toggleMetaBox( this );">
             <span class="title">
-                <span class="about_icon"><?php echo nice_svg(['key' => 'cog', 'size' => 'tiny']); ?></span>
+                <span class="about_icon"><?php echo nice_svg(['id' => 'cog', 'size' => 'tiny']); ?></span>
                 Work info
             </span>
                 <span class="collapse_icon">
-                <?php echo nice_svg(['key' => 'arrow_down', 'size' => 'tiny' ]); ?>
+                <?php echo nice_svg(['id' => 'arrow_down', 'size' => 'tiny' ]); ?>
             </span>
             </div>
 
@@ -118,11 +118,11 @@
 
         <div class="head" onclick="Nice.toggleMetaBox( this );">
             <span class="title">
-                <span class="about_icon"><?php echo nice_svg(['key' => 'cog', 'size' => 'tiny']); ?></span>
+                <span class="about_icon"><?php echo nice_svg(['id' => 'cog', 'size' => 'tiny']); ?></span>
                 Location
             </span>
             <span class="collapse_icon">
-                <?php echo nice_svg(['key' => 'arrow_down', 'size' => 'tiny' ]); ?>
+                <?php echo nice_svg(['id' => 'arrow_down', 'size' => 'tiny' ]); ?>
             </span>
         </div>
 
