@@ -17,6 +17,7 @@
     templates['test_modal']               = `<?php include 'template-parts/test_modal.ejs'; ?>`;
     window.models                         = {};
     models['services'] = jQuery.parseJSON('<?php echo json_encode( BO_SERVICES::$model ); ?>'); // I'm shocked myself O_o but it's work
+    models['requests'] = jQuery.parseJSON('<?php echo json_encode( UserRequest::$model ); ?>')
 
     /* ]]> */
 </script>

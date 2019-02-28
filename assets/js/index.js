@@ -15,8 +15,9 @@ jQuery(document).ready( function () {
 
     window.AjaxSend = AjaxSend;
 
-    Nice.insertCssVars( 'notFound' );
-    Nice.insertNotifyArea();
+    Nice.insert.cssVars( 'notFound' );
+    Nice.insert.modalArea();
+    Nice.insert.notifyArea();
 
     HandleDocumentInterface();
     HandleModal();
