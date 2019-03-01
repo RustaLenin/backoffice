@@ -70,85 +70,85 @@ Class UserRequest extends NiceCustomPost {
             'required'      => false,
             'in_form'       => false,
         ],
-        'request_type' => [
-            'name'          => 'request_type',
-            'data_type'     => 'string',
-            'required'      => true,
-            'in_form'       => true,
-            'field_type'    => 'single_check',
-            'validation'    => false,
-            'placeholder'   => '',
-            'label'         => 'Выберите тип заявки',
-            'is_basic'      => false,
-            'selections'    => [
-                [
-                    'name'       => 'dayoff',
-                    'text'      => 'Заявка на DayOff',
-                    'default'    => false,
-                    'permission' => 'all',
-                    'icon'       => false,
-                    'color'      => false
-                ],
-                [
-                    'name'       => 'sick',
-                    'text'      => 'Заявка на больничный',
-                    'default'    => false,
-                    'permission' => 'all',
-                    'icon'       => false,
-                    'color'      => false
-                ],
-                [
-                    'name'       => 'vacation',
-                    'text'      => 'Заявка на отпуск',
-                    'default'    => false,
-                    'permission' => 'all',
-                    'icon'       => false,
-                    'color'      => false
-                ]
-            ]
-        ],
-        'request_status' => [
-            'name'          => 'request_status',
-            'data_type'     => 'string',
-            'required'      => true,
-            'in_form'       => true,
-            'field_type'    => 'single_check',
-            'validation'    => false,
-            'placeholder'   => '',
-            'label'         => 'Выберите статус заявки',
-            'is_basic'      => false,
-            'selections'    => [
-                [
-                    'name'       => 'wait_approve',
-                    'text'      => 'Ожидает подтверждения',
-                    'default'    => false,
-                    'permission' => 'all',
-                    'icon'       => false,
-                    'color'      => false
-                ],
-                [
-                    'name'       => 'in_progress',
-                    'text'      => 'В работе',
-                    'default'    => false,
-                    'permission' => 'all',
-                    'icon'       => false
-                ],
-                [
-                    'name'       => 'declined',
-                    'text'      => 'Отклонена',
-                    'default'    => false,
-                    'permission' => 'all',
-                    'icon'       => false
-                ],
-                [
-                    'name'       => 'completed',
-                    'text'      => 'Выполнена',
-                    'default'    => false,
-                    'permission' => 'all',
-                    'icon'       => false
-                ]
-            ]
-        ],
+//        'request_type' => [
+//            'name'          => 'request_type',
+//            'data_type'     => 'string',
+//            'required'      => true,
+//            'in_form'       => true,
+//            'field_type'    => 'single_check',
+//            'validation'    => false,
+//            'placeholder'   => '',
+//            'label'         => 'Выберите тип заявки',
+//            'is_basic'      => false,
+//            'selections'    => [
+//                [
+//                    'name'       => 'dayoff',
+//                    'text'      => 'Заявка на DayOff',
+//                    'default'    => false,
+//                    'permission' => 'all',
+//                    'icon'       => false,
+//                    'color'      => false
+//                ],
+//                [
+//                    'name'       => 'sick',
+//                    'text'      => 'Заявка на больничный',
+//                    'default'    => false,
+//                    'permission' => 'all',
+//                    'icon'       => false,
+//                    'color'      => false
+//                ],
+//                [
+//                    'name'       => 'vacation',
+//                    'text'      => 'Заявка на отпуск',
+//                    'default'    => false,
+//                    'permission' => 'all',
+//                    'icon'       => false,
+//                    'color'      => false
+//                ]
+//            ]
+//        ],
+//        'request_status' => [
+//            'name'          => 'request_status',
+//            'data_type'     => 'string',
+//            'required'      => true,
+//            'in_form'       => true,
+//            'field_type'    => 'single_check',
+//            'validation'    => false,
+//            'placeholder'   => '',
+//            'label'         => 'Выберите статус заявки',
+//            'is_basic'      => false,
+//            'selections'    => [
+//                [
+//                    'name'       => 'wait_approve',
+//                    'text'      => 'Ожидает подтверждения',
+//                    'default'    => false,
+//                    'permission' => 'all',
+//                    'icon'       => false,
+//                    'color'      => false
+//                ],
+//                [
+//                    'name'       => 'in_progress',
+//                    'text'      => 'В работе',
+//                    'default'    => false,
+//                    'permission' => 'all',
+//                    'icon'       => false
+//                ],
+//                [
+//                    'name'       => 'declined',
+//                    'text'      => 'Отклонена',
+//                    'default'    => false,
+//                    'permission' => 'all',
+//                    'icon'       => false
+//                ],
+//                [
+//                    'name'       => 'completed',
+//                    'text'      => 'Выполнена',
+//                    'default'    => false,
+//                    'permission' => 'all',
+//                    'icon'       => false
+//                ]
+//            ]
+//        ],
         'documents' => [
             'name'          => 'documents',
             'data_type'     => 'array',
